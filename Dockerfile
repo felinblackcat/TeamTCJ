@@ -26,4 +26,4 @@ COPY --from=builder /app/wheels /wheels
 COPY --from=builder /app/requirements.txt .
 RUN pip install --no-cache /wheels/*
 COPY app /app
-# ENTRYPOINT ["gunicorn", "project.wsgi:application", "--bind", "0.0.0.0:8000"]
+ENTRYPOINT ["gunicorn", "project.wsgi:application", "--bind", "0.0.0.0:8000"]
