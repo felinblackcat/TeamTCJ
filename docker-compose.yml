@@ -25,6 +25,8 @@ services:
     volumes:
       - ./app/:/app
     restart: always
+    ports:
+      - 8010:8000
     depends_on: 
       - bd
 volumes:

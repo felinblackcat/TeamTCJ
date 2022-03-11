@@ -26,4 +26,5 @@ COPY --from=builder /app/wheels /wheels
 COPY --from=builder /app/requirements.txt .
 RUN pip install --no-cache /wheels/*
 COPY app /app
-ENTRYPOINT ["gunicorn", "project.wsgi:application", "--bind", "0.0.0.0:8000"]
+CMD ["gunicorn", "--worker-tmp-dir", "/dev/shm","project.wsgi:application", "--reload", "--bind", "0.0.0.0:8000"]
+HEALTHCHECK CMD curl --fail http://localhost:8000 || exit 1

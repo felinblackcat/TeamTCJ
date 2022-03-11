@@ -1,0 +1,6 @@
+projectKey=TeamTCJ
+serverUrl=http://127.0.0.1:9000
+serverVersion=9.3.0.51899
+dashboardUrl=http://127.0.0.1:9000/dashboard?id=TeamTCJ
+ceTaskId=AX93y33-TcQXG64igREB
+ceTaskUrl=http://127.0.0.1:9000/api/ce/task?id=AX93y33-TcQXG64igREB
